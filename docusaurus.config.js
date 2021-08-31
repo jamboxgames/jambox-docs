@@ -7,7 +7,7 @@ module.exports = {
   tagline: "Dinosaurs are cool",
   url: "https://wizardly-ride-28e0db.netlify.app",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "facebook", // Usually your GitHub org/user name.
