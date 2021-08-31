@@ -3,15 +3,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Jambox Games",
+  tagline: "Competitive Game Publishing Platform",
   url: "https://wizardly-ride-28e0db.netlify.app",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "Jambox Games", // Usually your GitHub org/user name.
+  projectName: "jambox-docs", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "Jambox Games",
@@ -42,7 +42,7 @@ module.exports = {
           items: [
             {
               label: "Tutorial",
-              to: "/docs/intro",
+              to: "docs/overview/introduction",
             },
           ],
         },
