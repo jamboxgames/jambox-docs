@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: "My Site",
   tagline: "Dinosaurs are cool",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://wizardly-ride-28e0db.netlify.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -31,7 +31,7 @@ module.exports = {
           docId: "sdkdocs/introduction",
           position: "left",
           label: "Arena SDK Docs",
-        }
+        },
       ],
     },
     footer: {
