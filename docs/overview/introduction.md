@@ -22,7 +22,7 @@ The second scenario allows you to increase the spends on the usage of hard curre
 Duels is a competitive format which allows your players to instantly match up, and compete with other players. The results provided instantly. 
 Duels are 1 v 1 single attempts tournaments, here the player puts in a wager defined for each duel and can win the amount defined by you.
 
-[Read More](duels.md))
+[Read More](duels.md)
 
 ### 3. Friendly Tournaments 
 In this format, your players can set up private tournaments to play with your friends. As with Duels, you can define a base entry cost for each friendly tournament, but the winning amount
