@@ -14,7 +14,7 @@ module.exports = {
   projectName: "jambox-docs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "Jambox Games",
+      title: "",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
