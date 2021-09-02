@@ -4,13 +4,13 @@ sidebar_position: 4
 
 # SDK - Initialization
 
-Add `Assets/Jambox/Prefabs/JamboxCanvas.prefab` in your Main UI Scene. Once done, click the JamboxPlugin Object in the Unity Editor and set the game secret key, game id, ServerIP, ServerPort. You can get the game details from your publishing manager.
+Add `Assets/Jambox/Prefabs/JamboxCanvas.prefab` in your Main UI Scene. Once done, click the JamboxPlugin Object in the Unity Editor and set the `game secret key`, `game id`, `ServerIP`, `ServerPort`. You can get values from your publishing manager.
 
-Call the function of the ArenaSDKCommunicatior to Initialize the SDK. This will authenticate the user and create a user session. 
+Call the `InitializeArenaSdk` function of the ArenaSDKCommunicatior to initialize the SDK. This will authenticate the user and create a user session. 
 
-Games should provide the user id if it is using any to identify the user. If there is no user id provided, Arena SDK will use a platform based unique system identifier as user identification
+You should provide the unique `userID` if avaliable. If there is no user id provided, Arena SDK will generate it own identifier.
 
-Games can also provide a username for the user. If no username is provided, SDK will ask for a username when initialized for the first time.
+Games can also provide a username/display name. The SDK will use the same name for the user within its screens. If no username is provided, SDK will ask for a username when initialized for the first time.
 
 ```cpp
     public void InitializeArenaSdk(string userName = null, string userID=null)
@@ -19,7 +19,7 @@ Games can also provide a username for the user. If no username is provided, SDK 
     }
 ```
 
-Once Arena SDK is initialized, You can open the prebuilt multiplayer UI for various SDK features. You should typically provide a button on your main UI screen to initialize the Arena SDK multiplayer UI.
+Once the Arena SDK is initialized, You can open the prebuilt multiplayer UI for various SDK features. You should typically provide a button on your main UI screen to initialize the Arena SDK multiplayer UI.
 
 ```cpp
     public void OpenArenaUI(Dictionary<string, long> currencyMap = null)

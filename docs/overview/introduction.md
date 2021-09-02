@@ -6,7 +6,7 @@ sidebar_position: 1
 
 The Jambox Arena SDK helps game developers convert their single player games into Competitive multiplayer games. 
 The SDK allows you to run competitive formats like Tournaments, Duels and Friendly Tournaments where the infrastructure and core services like match making is completely managed for you. 
-As players spend more time in the game competing with other players you should see a lift in engagement and revenue metrics. 
+As players spend more time in the game competing with other players you will see a lift in engagement and revenue metrics. 
 ## The competitive Formats 
 Arena SDK provides 3 competitive formats, each with their own benefits. 
 
@@ -28,3 +28,5 @@ Duels are 1 v 1 single attempts tournaments, here the player puts in a wager def
 In this format, your players can set up private tournaments to play with your friends. As with Duels, you can define a base entry cost for each friendly tournament, but the winning amount
 
 [Read More](friendly.md)
+
+![image](../../static/img/tournament_example.jpg)
