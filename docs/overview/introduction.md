@@ -10,6 +10,8 @@ As players spend more time in the game competing with other players you will see
 ## The competitive Formats 
 Arena SDK provides 3 competitive formats, each with their own benefits. 
 
+![image](../../static/img/tournament_example.jpg)
+
 ### 1. Tournaments
 Tournaments allow your player to complete with other players to either win in game currency or in game items. You can define the entry fee and currency for each tournaments. Thus you can have tournaments where: 
 1. Users play for free to win soft currency like coins
@@ -28,5 +30,3 @@ Duels are 1 v 1 single attempts tournaments, here the player puts in a wager def
 In this format, your players can set up private tournaments to play with your friends. As with Duels, you can define a base entry cost for each friendly tournament, but the winning amount
 
 [Read More](friendly.md)
-
-![image](../../static/img/tournament_example.jpg)
