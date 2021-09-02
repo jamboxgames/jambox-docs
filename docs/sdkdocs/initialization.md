@@ -4,9 +4,11 @@ sidebar_position: 4
 
 # SDK - Initialization
 
+Add `Assets/Jambox/Prefabs/JamboxCanvas.prefab` in your Main UI Scene. Once done, click the JamboxPlugin Object in the Unity Editor and set the game secret key, game id, ServerIP, ServerPort. You can get the game details from your publishing manager.
+
 Call the function of the ArenaSDKCommunicatior to Initialize the SDK. This will authenticate the user and create a user session. 
 
-Game should provide the user id if it is using any to identify the user. If there is no user id provided, Arena SDK will use a platform based unique system identifier as user identification
+Games should provide the user id if it is using any to identify the user. If there is no user id provided, Arena SDK will use a platform based unique system identifier as user identification
 
 Games can also provide a username for the user. If no username is provided, SDK will ask for a username when initialized for the first time.
 

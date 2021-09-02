@@ -9,10 +9,11 @@ The Arena SDk plugin fires several events to inform you about the gameplay event
 ```cpp
 private void Start()
     {
-            UIPanelCommunicator.Instance.OnPlay += OnPlayHit;
-            UIPanelCommunicator.Instance.OnBackToLobby += OnBackToLobbyHit;
-            UIPanelCommunicator.Instance.OnPurchaseRequired += OnPurchaseRequired;
-            UIPanelCommunicator.Instance.UserMoneyUpdate += OnUpdateMoney;
+            ArenaSDKEvent.Instance.OnPlay += OnPlayHit;
+            ArenaSDKEvent.Instance.OnBackToLobby += OnBackToLobbyHit;
+            ArenaSDKEvent.Instance.OnPurchaseRequired += OnStoreClick;
+            ArenaSDKEvent.Instance.UserMoneyUpdate += OnUpdateMoney;
+            ArenaSDKEvent.Instance.OnWatchAdRequired += WatchVideoClicked;
     }
 ```
 
@@ -33,17 +34,35 @@ In the example below you can place your gameplay start code or scene switching c
     }
 ```
 
-
-
 When the user wants to exit from the Arena Multiplayer UI, Arena SDK will notify the game to open its own Main UI.
 
 ```cpp
-    /// This event will be called when the user exits from Arena SDK UI. 
-    ///Activate your Main UI panel here.
-    
+    /// This event will be called when the user exits from Arena SDK UI.     
     private void OnBackToLobbyHit()
     {
+        ///Activate your Main UI panel here.
+    }
+```
 
+## Game Score Submission
+
+Once a game is complete you should submit your score. SubmitScore API will submit the score to the server. Arena SDK UI will get initialized once you submit the score.
+
+```cpp
+    public void SubmitScore(int Score, int subScore)
+    {
+            
+    }
+```
+
+## Currency Updation
+
+Arena SDK do not store the user currency and work on the currency details provided by the Game. SDK will provide will notify the game for every transaction made on the server. Game should increase/decrease that currency from the User account here
+
+```cpp
+    private void OnUpdateMoney(int UserMoney, string Currency, bool isIncrease)
+    {
+        //Call Game Currency updation code here
     }
 ```
 
@@ -81,7 +100,7 @@ Whenever users join / play a game or win reward, Arena SDK will notify the game 
 
 Developers can set the matches to be played even if the chances expired for users by watching Ads. This can be set from the Developer Dashboard by setting Play With Ads property as true. Arena SDK will notify for a watch ad event for the game to show user rewarded videos. Game should notify the Arena SDK of watch ad completion or success.
 
-  ```cpp  
+```cpp  
     private void OnWatchAdRequired()
     {
         
@@ -91,19 +110,8 @@ Developers can set the matches to be played even if the chances expired for user
 Once User has watched the Ads required to play, Game should call SDK api PlayAfterWatchAd to resume the match flow. This API will start the Match for user.
 
 ```cpp
-public void PlayAfterWatchAd()
-{
-}
-```
-
-## Game Score Submission
-
-Once a game is complete you should submit your score. SubmitScore API will submit the score to the server. Arena SDK UI will get initialized once you submit the score.
-
-```cpp
-public void SubmitScore(int Score, int subScore)
-{
-           
-}
-
+    public void PlayAfterWatchAd()
+    {
+        
+    }
 ```
