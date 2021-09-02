@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Your game is alreayd awesome, stop worrying about scaling servers, CCUs etc.
+        Your game is already awesome, stop worrying about scaling servers, CCUs etc.
       </>
     ),
   },
