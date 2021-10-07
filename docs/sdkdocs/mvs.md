@@ -3,7 +3,7 @@ sidebar_position: 6
 
 ---
 
-# SDK - Multiplay Visual System(MVS)
+# SDK - Multiplay Visual System(MVS) Recording
 
 Multiplay Visual System(MVS) helps the game to provide users real time player vs player experience. The system will help in showing the opponenet gameplay and real time score change on the User gameplay screen.
 
