@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="1200px" viewBox="0 0 1000 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arena SDK Flow</title>
+    <g id="Arena-SDK-Flow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="1000" height="1200"></rect>
+        <g id="Group" transform="translate(85.000000, 57.000000)">
+            <rect id="Rectangle" stroke="#979797" x="0.5" y="0.5" width="272" height="117" rx="10"></rect>
+            <text id="Game" font-family="SFProText-Bold, SF Pro Text" font-size="34" font-weight="bold" letter-spacing="0.364285714" fill="#000000">
+                <tspan x="86.8383231" y="71">Game</tspan>
+            </text>
+        </g>
+        <g id="Block-Copy" transform="translate(642.000000, 57.000000)">
+            <rect id="Rectangle" stroke="#979797" x="0.5" y="0.5" width="272" height="117" rx="10"></rect>
+            <text id="Game" font-family="SFProText-Bold, SF Pro Text" font-size="34" font-weight="bold" letter-spacing="0.364285714" fill="#000000">
+                <tspan x="43.6766323" y="71">Arena SDK</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(243.000000, 271.000000)">
+            <path id="Line" d="M496.5,66.5 L520.5,78.5 L496.5,90.5 L496.5,80.5 L-1.5,80.5 L-1.5,76.5 L496.5,76.5 L496.5,66.5 Z" fill="#979797" fill-rule="nonzero"></path>
+            <text id="Load-Arena-screen" font-family="OpenSans-Regular, Open Sans" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="156.332031" y="26">Load Arena screen</tspan>
+            </text>
+            <text id="OpenArenaUI()" font-family="PTMono-Regular, PT Mono" font-size="19" font-weight="normal" fill="#3100FF">
+                <tspan x="186.4" y="57">OpenArenaUI()</tspan>
+            </text>
+        </g>
+        <g id="Right---Arrow-Copy" transform="translate(241.000000, 477.000000)">
+            <path id="Line" d="M496.5,66.5 L520.5,78.5 L496.5,90.5 L496.5,80.5 L-1.5,80.5 L-1.5,76.5 L496.5,76.5 L496.5,66.5 Z" fill="#979797" fill-rule="nonzero"></path>
+            <text id="Load-Arena-screen" font-family="OpenSans-Regular, Open Sans" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="186.466797" y="26">Submit Score</tspan>
+            </text>
+            <text id="OpenArenaUI()" font-family="PTMono-Regular, PT Mono" font-size="19" font-weight="normal" fill="#3100FF">
+                <tspan x="186.4" y="57">SubmitScore()</tspan>
+            </text>
+        </g>
+        <g id="Left-Arrow" transform="translate(242.000000, 374.000000)">
+            <path id="Line" d="M24,66 L24,76 L523,76 L523,80 L24,80 L24,90 L0,78 L24,66 Z" fill="#979797" fill-rule="nonzero"></path>
+            <text id="Load-Arena-screen" font-family="OpenSans-Regular, Open Sans" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="189.460938" y="26">Play A round</tspan>
+            </text>
+            <text id="OpenArenaUI()" font-family="PTMono-Regular, PT Mono" font-size="19" font-weight="normal" fill="#3100FF">
+                <tspan x="214.9" y="57">OnPlay()</tspan>
+            </text>
+        </g>
+        <g id="Left-Arrow-Copy" transform="translate(244.000000, 580.000000)">
+            <path id="Line" d="M24,66 L24,76 L523,76 L523,80 L24,80 L24,90 L0,78 L24,66 Z" fill="#979797" fill-rule="nonzero"></path>
+            <text id="Load-Arena-screen" font-family="OpenSans-Regular, Open Sans" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="188.880859" y="26">Reward User</tspan>
+            </text>
+            <text id="OpenArenaUI()" font-family="PTMono-Regular, PT Mono" font-size="19" font-weight="normal" fill="#3100FF">
+                <tspan x="175" y="57">OnUpdateMoney()</tspan>
+            </text>
+        </g>
+        <g id="Left-Arrow-Copy-2" transform="translate(241.000000, 683.000000)">
+            <path id="Line" d="M24,66 L24,76 L523,76 L523,80 L24,80 L24,90 L0,78 L24,66 Z" fill="#979797" fill-rule="nonzero"></path>
+            <text id="Load-Arena-screen" font-family="OpenSans-Regular, Open Sans" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="171.460938" y="26">Return to Game</tspan>
+            </text>
+            <text id="OpenArenaUI()" font-family="PTMono-Regular, PT Mono" font-size="19" font-weight="normal" fill="#3100FF">
+                <tspan x="175" y="57">OnBackToLobby()</tspan>
+            </text>
+        </g>
+        <g id="Left-Arrow-Copy-3" transform="translate(240.000000, 894.000000)">
+            <path id="Line" d="M24,66 L24,76 L523,76 L523,80 L24,80 L24,90 L0,78 L24,66 Z" fill="#979797" fill-rule="nonzero"></path>
+            <text id="Load-Arena-screen" font-family="OpenSans-Regular, Open Sans" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="155.095703" y="26">Purchase Currency</tspan>
+            </text>
+            <text id="OpenArenaUI()" font-family="PTMono-Regular, PT Mono" font-size="19" font-weight="normal" fill="#3100FF">
+                <tspan x="146.5" y="57">OnPurchaseRequired()</tspan>
+            </text>
+        </g>
+        <g id="Left-Arrow-Copy-4" transform="translate(243.000000, 997.000000)">
+            <path id="Line" d="M24,66 L24,76 L523,76 L523,80 L24,80 L24,90 L0,78 L24,66 Z" fill="#979797" fill-rule="nonzero"></path>
+            <text id="Load-Arena-screen" font-family="OpenSans-Regular, Open Sans" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="130.111328" y="26">Watch Ad (For Attempt)</tspan>
+            </text>
+            <text id="OpenArenaUI()" font-family="PTMono-Regular, PT Mono" font-size="19" font-weight="normal" fill="#3100FF">
+                <tspan x="152.2" y="57">OnWatchAdRequired()</tspan>
+            </text>
+        </g>
+        <line x1="221.5" y1="175.603676" x2="221.5" y2="1143.5" id="Line-2" stroke="#979797" stroke-width="5" stroke-linecap="square"></line>
+        <line x1="778.5" y1="175.603676" x2="778.5" y2="1143.5" id="Line-2-Copy" stroke="#979797" stroke-width="5" stroke-linecap="square"></line>
+        <text id="Core-Flow" font-family="OpenSans-Bold, Open Sans" font-size="32" font-weight="bold" fill="#000000">
+            <tspan x="425.757812" y="234">Core Flow </tspan>
+        </text>
+        <text id="Other-Flows" font-family="OpenSans-Bold, Open Sans" font-size="32" font-weight="bold" fill="#000000">
+            <tspan x="405.710938" y="857">Other Flows</tspan>
+        </text>
+    </g>
+</svg>

@@ -3,11 +3,11 @@ sidebar_position: 6
 
 ---
 
-# SDK - Multiplay Visual System(MVS) Recording
+# SDK - Async Multiplay System Recording
 
-Multiplay Visual System(MVS) helps the game to provide users real time player vs player experience. The system will help in showing the opponenet gameplay and real time score change on the User gameplay screen.
+Async Multiplay System helps the game to provide users real time player vs player experience. The system will help in showing the opponenet gameplay and real time score change on the User gameplay screen.
 
-MVS helps in recording the user gameplay and providing the data back to render it again on the sceen. Gameplay data is recorded as a key based interval data. This key can be time interval from the gameplay start or any other value which define a game incremental interval key.
+The Async Multiplay System helps in recording the user gameplay and providing the data back to render it again on the sceen. Gameplay data is recorded as a key based interval data. This key can be time interval from the gameplay start or any other value which define a game incremental interval key.
 
 ### Start Recording
 You can start recording the gameplay of user by calling API `StartRecording`. Game should call this API when the gameplay start for user. Game should pass all the gamedata required for the initialization of the gameplay from this Record Data. For an example, If a racing game has multiple levels and cars then it should pass the selected car and level when calling the API.
