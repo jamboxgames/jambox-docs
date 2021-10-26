@@ -7,6 +7,8 @@ sidebar_position: 5
 The Arena SDK plugin fires several events to inform you about the gameplay events. Add the following code to register to the events
 
 ```cpp
+using Jambox.Connector;
+
 private void Start()
     {
             ArenaSDKEvent.Instance.OnPlay += OnPlayHit;
@@ -24,11 +26,12 @@ When Arena SDK multiplayer UI will open. It will show all the gameplay options l
 In the example below, you can place your gameplay start code or scene switching code.
 
 ```cpp
+    using Jambox;
     /// This event is called when a user plays a tournament. 
     /// You should load your game scene here.
     /// Use metadata to initialize your gameplay with custom settings
  	
-    private void OnPlayHit(Dictionary<string, string> metadata)
+    private void OnPlayHit(Match metadata)
     {
 	    //Start Gameplay here
     }
