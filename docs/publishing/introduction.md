@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Introduction Supernova SDK Docs
+# Introduction
 
-Supernova SDK is a unified SDK devkit to integrate all the SDKs required for your games. The SDK is specifically designed to add all the SDKs and provide helper functionalities for the developer. 
+The Jambox SDK is a unified SDK which helps you in integrating all the SDKs required for your games. The SDK is specifically designed to add all the SDKs and provide helper functionalities for the developer. 

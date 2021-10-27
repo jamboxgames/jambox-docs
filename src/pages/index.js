@@ -18,7 +18,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/overview/introduction"
           >
-            Get Started - Arena SDK Overview
+            Get Started - Jambox Arena Overview
           </Link>
         </div>
       </div>

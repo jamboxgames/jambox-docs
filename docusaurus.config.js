@@ -24,14 +24,20 @@ module.exports = {
           type: "doc",
           docId: "overview/introduction",
           position: "left",
-          label: "Arena SDK Overview",
+          label: "Jambox Arena Overview",
         },
         {
           type: "doc",
           docId: "sdkdocs/introduction",
           position: "left",
-          label: "Arena SDK Docs",
+          label: "Jambox Arena Docs",
         },
+        {
+          type: "doc",
+          docId: "publishing/introduction",
+          position: "left",
+          label: "Jambox SDK",
+        }
       ],
     },
     footer: {
