@@ -75,12 +75,19 @@ When the user wants to join a match, Arena SDK will check for the currency requi
  
 The game Should open its Store UI and allow the user to purchase the balance amount.
  
-Once the user makes a purchase then the game should call the OpenArenaUI to give control back to Arena SDK to join/play the match.
+Once the user makes a purchase then the game should call the PlayAfterPurchase to give control back to Arena SDK to join/play the match.
 
 ```cpp
     //This event will be called if user currency is less than the currency required by user to play tournament
     //You need to start the SDK UI again after currency purchase
     private void OnPurchaseRequired(long amountRequired, string currencyKey)
+    {
+
+    }
+
+    //This function will check for the tournament for which purchase request has been made and open the corresponding panel 
+    //to join the tournament or duel
+    public void PlayAfterPurchase (bool PurchaseSuccess = true, Dictionary<string, long> currencyMap = null)
     {
 
     }
