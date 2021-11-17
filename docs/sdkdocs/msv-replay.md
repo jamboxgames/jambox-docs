@@ -83,3 +83,14 @@ Arena SDK provide a class 'TimeReplayPlayer' for replaying the replaydata if the
         ReplayScoreManager.Instance.GameOver();
     }
 ```
+
+Once your callbacks are set, You can Start and Stop the Replay calling following functions. Once you call this method you will start getting the 'ExecuteDataString' callbacks.
+
+```cpp
+//call this to start replay playing. 
+TimeReplayPlayer.Instance.PlayOpponentReplay();
+
+//call this to stop replay playing. 
+TimeReplayPlayer.Instance.StopPlayingReplay();
+
+```
