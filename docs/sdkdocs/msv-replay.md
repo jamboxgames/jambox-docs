@@ -3,7 +3,7 @@ sidebar_position: 8
 
 ---
 
-# SDK - Multiplay Visual System Replay
+# Multiplay Visual System Replay
 
 Async Multiplay System also helps in replay back the recording gameplay. Replay data will be obtained when you are matchmaked agains an opponent and a match is created. Match object will have the information of Opponent data and Replay recording.
 

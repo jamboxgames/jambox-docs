@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# SDK - UI Customization
+# UI Messages Customization
 
 Arena SDK provides functionality to customize your UI messages. You can set your own messages for various UI elements according to your choice which suits the game.
 

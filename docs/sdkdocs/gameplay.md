@@ -2,14 +2,14 @@
 sidebar_position: 5
 ---
 
-# SDK - Game Play Setup
+# Game Play Setup
 
 The Arena SDK plugin fires several events to inform you about the gameplay events. Add the following code to register to the events
 
 ```cpp
 using Jambox.Connector;
 
-private void Start()
+private void RegisterEvents()
     {
             ArenaSDKEvent.Instance.OnPlay += OnPlayHit;
             ArenaSDKEvent.Instance.OnBackToLobby += OnBackToLobbyHit;
@@ -19,7 +19,7 @@ private void Start()
     }
 ```
 
-## Game Launch and Exit 
+## Game Launch
 
 When Arena SDK multiplayer UI will open. It will show all the gameplay options like Tournaments, Duels, and Friendly. The user will select the particular option to play a match. Once that happens, Arena SDK will notify the game about the match a user wants to play. The control will now be given to Gameplay UI and Arena multiplayer UI will be closed.
  
@@ -37,6 +37,8 @@ In the example below, you can place your gameplay start code or scene switching 
     }
 ```
 
+## SDK UI Exit
+
 When the user wants to exit from the Arena Multiplayer UI, Arena SDK will notify the game to open its Main UI.
 
 ```cpp
@@ -46,7 +48,6 @@ When the user wants to exit from the Arena Multiplayer UI, Arena SDK will notify
         ///Activate your Main UI panel here.
     }
 ```
-
 ## Game Score Submission
 
 Once a game is complete you should submit your score. SubmitScore API will submit the score to the server. Arena SDK UI will get initialized once you submit the score.
@@ -57,6 +58,7 @@ Once a game is complete you should submit your score. SubmitScore API will submi
             
     }
 ```
+
 
 ## Currency Updation
 
@@ -80,7 +82,7 @@ Once the user makes a purchase then the game should call the PlayAfterPurchase t
 ```cpp
     //This event will be called if user currency is less than the currency required by user to play tournament
     //You need to start the SDK UI again after currency purchase
-    private void OnPurchaseRequired(long amountRequired, string currencyKey)
+    private void OnStoreClick(long amountRequired, string currencyKey)
     {
 
     }
@@ -93,25 +95,12 @@ Once the user makes a purchase then the game should call the PlayAfterPurchase t
     }
 ```
 
-## Reward Consumption
-
-Whenever users joins/play a game or wins a reward, Arena SDK will notify the game of the change in the users balance. Games should handle the change in balance here.
-
-```cpp
-    //This event is called on every currency transaction happened on Arena Server.
-    //Your code for increment and decrement of currency should come here. 
-    private void OnUpdateMoney(long amount, string currencyKey, bool isIncrease)
-    {
-        // Call you game update currency code here
-    }
-```
-
 ## Watching Ads to Play
 
 Developers can set the matches to be played even if the chances expired for users by watching Ads. This can be set from the Arena Dashboard by setting the `Play With Ads` property to true. Arena SDK will notify the game to show a rewarded videos ad so that the player may get an additional chance, post which the game should notify the SDK of completion or success.
 
 ```cpp  
-    private void OnWatchAdRequired()
+    private void WatchVideoClicked()
     {
         
     }
@@ -124,4 +113,81 @@ Once User has watched the Ads required to play, Game should call SDK api PlayAft
     {
         
     }
+```
+
+## Sample Class
+
+You can use this sample class with events setup                                 
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using Jambox;
+using Jambox.Tourney.Connector;
+using UnityEngine;
+
+public class TourneyManager : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        ArenaSDKEvent.Instance.InitializeArenaSdk();
+        RegisterEvents();
+    }
+
+    void RegisterEvents()
+    {
+        ArenaSDKEvent.Instance.OnPlay += OnPlayHit;
+        ArenaSDKEvent.Instance.OnBackToLobby += OnBackToLobbyHit;
+        ArenaSDKEvent.Instance.OnPurchaseRequired += OnStoreClick;
+        ArenaSDKEvent.Instance.UserMoneyUpdate += OnUpdateMoney;
+        ArenaSDKEvent.Instance.OnWatchAdRequired += WatchVideoClicked;
+
+    }
+
+    public void OpenUI()
+    {
+        Dictionary<string, long> MoneyDetail = new Dictionary<string, long>();
+        //Pass the user game currency value here
+        MoneyDetail.Add("key_gems", 1000);
+
+        ArenaSDKEvent.Instance.OpenArenaUI(MoneyDetail);
+
+        //disable Game UI
+        DisableGameUI();
+
+    }
+
+    void DisableGameUI()
+    {
+        gameObject.SetActive(false);
+    }
+
+    private void OnPlayHit(Match matchData)
+    {
+
+    }
+
+    private void OnBackToLobbyHit()
+    {
+
+    }
+
+    private void OnStoreClick(int coinsRequired, string currency)
+    {
+
+    }
+
+    private void OnUpdateMoney(int userMoney, string currency, bool isIncrease)
+    {
+
+    }
+
+    private void WatchVideoClicked()
+    {
+
+    }
+
+}
+
 ```

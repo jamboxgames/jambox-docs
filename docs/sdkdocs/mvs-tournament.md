@@ -3,7 +3,7 @@ sidebar_position: 9
 
 ---
 
-# SDK - Realtime Visual System For Tournaments
+# Realtime Visual System For Tournaments
 
 Arena SDK provide widget to show real time leaderboard updation for the tournament. As the player keep on adding the score, user will climb the leaderboard rank. Widget will show the current rank of the player. 
 

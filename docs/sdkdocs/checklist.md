@@ -3,7 +3,7 @@ sidebar_position: 10
 
 ---
 
-# SDK - Going Live with Arena
+# Going Live with Arena
 
 Before going live with Arena SDK, Developers should use this as a check list to make sure all the features/flow are implmented
 

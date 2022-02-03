@@ -3,7 +3,7 @@ sidebar_position: 7
 
 ---
 
-# SDK - Async Multiplay System Recording
+# Async Multiplay System Recording
 
 Async Multiplay System helps the game to provide users real time player vs player experience. The system will help in showing the opponenet gameplay and real time score change on the User gameplay screen.
 
