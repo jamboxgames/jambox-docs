@@ -3,9 +3,10 @@ sidebar_position: 8
 
 ---
 
-# Multiplay Visual System Replay
+# Async Multiplay System Replay
 
-Async Multiplay System also helps in replay back the recording gameplay. Replay data will be obtained when you are matchmaked agains an opponent and a match is created. Match object will have the information of Opponent data and Replay recording.
+Async Multiplay System also helps in replay back the recording gameplay. Replay data will be obtained when you are matchmaking against an opponent and a match is created. The match object will have the information of Opponent data and Replay recording.
+
 
 ``` cpp
     public event Action<Match> OnPlay;
@@ -39,7 +40,7 @@ Async Multiplay System also helps in replay back the recording gameplay. Replay 
     }
 ```
 
-IAPIReplayData holds the gamedata along with all the frame data that were set earlier during the recording of the user gameplay.
+IAPIReplayData holds the game data along with all the frame data that were set earlier during the recording of the user gameplay.
 
 ```cpp
     public interface IAPIReplayData
@@ -50,7 +51,9 @@ IAPIReplayData holds the gamedata along with all the frame data that were set ea
     }
 ```
 
-Arena SDK provide a class 'TimeReplayPlayer' for replaying the replaydata if the interval key is time in sec. You can set the replaydata in to the class and register for the callback actions to get the replay data with time. In your Gameplay manager class where you have created your callbakc function for OnPlay action, you can set this below code.
+Arena SDK provides a class `TimeReplayPlayer` for replaying the replay data if the interval key is time in seconds. 
+ 
+Replay data is return in the Match object passed in the `OnPlay` function callback. You can enable the replay data by calling the `SetOpponentReplayData` thus registering for the `ExecuteDataString` callback to get the replay data with time. In your Gameplay manager class where you have created your callback function for `OnPlay` action, you can set this below code.
 
 ```cpp
     private void OnPlayHit(Match matchData)
@@ -84,7 +87,7 @@ Arena SDK provide a class 'TimeReplayPlayer' for replaying the replaydata if the
     }
 ```
 
-Once your callbacks are set, You can Start and Stop the Replay calling following functions. Once you call this method you will start getting the 'ExecuteDataString' callbacks.
+Once your callbacks are set, You can Start and Stop the Replay by calling the following functions. Once you call this method you will start getting the 'ExecuteDataString' callbacks.
 
 ```cpp
 //call this to start replay playing. 

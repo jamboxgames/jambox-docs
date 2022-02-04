@@ -18,3 +18,7 @@ To create an event you will need the following
 - A start date and an end date
 - The number of attempts you want your players to get
 - The maximum size of a leaderboard, Each tournament can have multiple leaderboards, each fixed to a max limit you specify.
+
+You can even set up recurring events if you want your events to be repeated 
+
+![image](../../static/img/create_event_recurring.png)

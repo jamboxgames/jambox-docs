@@ -12,7 +12,7 @@ Setting up the Arena SDK requires a few simple steps
 4. Gameplay Setup
 5. UI Customization
 6. Async Multiplay System Recording
-7. Multiplay Visual System Replay
+7. Async Multiplay System Replay
 8. Realtime Visual System For Tournaments
 9. Going Live with Arena
 

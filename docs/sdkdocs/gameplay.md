@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Game Play Setup
 
-The Arena SDK plugin fires several events to inform you about the gameplay events. Add the following code to register to the events
+The Arena SDK plugin fires several events to inform you about the gameplay events. Add the following code to register to the events. There is also a sample class provided at the end of this page to help you get started.
 
 ```cpp
 using Jambox.Connector;
@@ -80,7 +80,7 @@ The game Should open its Store UI and allow the user to purchase the balance amo
 Once the user makes a purchase then the game should call the PlayAfterPurchase to give control back to Arena SDK to join/play the match.
 
 ```cpp
-    //This event will be called if user currency is less than the currency required by user to play tournament
+    //This event will be called if user currency is less than the currency required by the user to play the tournament
     //You need to start the SDK UI again after currency purchase
     private void OnStoreClick(long amountRequired, string currencyKey)
     {
@@ -106,7 +106,7 @@ Developers can set the matches to be played even if the chances expired for user
     }
 ```
 
-Once User has watched the Ads required to play, Game should call SDK api PlayAfterWatchAd to resume the match flow. This API will start the Match for user.
+Once the user has watched the Ads required to play, the Game should call SDK API PlayAfterWatchAd to resume the match flow. This API will start the Match for the user.
 
 ```cpp
     public void PlayAfterWatchAd()
