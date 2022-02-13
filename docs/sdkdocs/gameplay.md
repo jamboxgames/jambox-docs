@@ -31,9 +31,22 @@ In the example below, you can place your gameplay start code or scene switching 
     /// You should load your game scene here.
     /// Use metadata to initialize your gameplay with custom settings
  	
-    private void OnPlayHit(Match metadata)
+    private void OnPlayHit(Match matchData)
     {
 	    //Start Gameplay here
+    }
+```
+
+Developer can add key/value pairs in tournament metadata while creating on dashboard. These key/values are received in the Match object in the `OnPlay` callback. Game can use these keys to control the gameplay initialisation.
+
+```cpp
+    private void OnPlayHit(Match matchData)
+    {
+	    string ballType = matchData.metadata["ball_type"];
+	    string tileType = matchData.metadata["tile_type"];
+
+        //use ball type and tile type in the gameplay
+	    StartGameplay(ballType,tileType);
     }
 ```
 
