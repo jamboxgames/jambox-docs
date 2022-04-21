@@ -36,7 +36,7 @@ module.exports = {
           type: "doc",
           docId: "publishing/introduction",
           position: "left",
-          label: "Jambox SDK",
+          label: "Publishing SDK",
         }
       ],
     },
