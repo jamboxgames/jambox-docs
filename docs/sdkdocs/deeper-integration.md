@@ -13,10 +13,10 @@ If you are planning to use the Jambox Arena UI, you don't need to go though the 
 
 Remember to initialize the SDK by following step 1 [here](https://docs.jambox.games/docs/sdkdocs/initialization)
 
-## GetTourneydetail
+## GetEventList
 
 ```cpp
-GetTourneydetail(Action<IApiTourneyList> OnReceived, Action<String> OnErrorReceived)
+GetEventList(Action<IApiTourneyList> OnReceived, Action<String> OnErrorReceived)
 ```
 
 This method returns the list of available events for the players
@@ -197,6 +197,7 @@ PlayFriendlyTourney( string tourneyId, Action<IApiPlayFriendlyTourney> OnReceive
 ```cpp
 GetCurrencyData( Action<IAPICurrencyList> OnReceived, Action<String> OnErrorReceived)
 ```
+
 **Callbacks**
 
 - onRecieved: 
