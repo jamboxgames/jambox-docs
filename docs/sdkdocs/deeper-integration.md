@@ -16,7 +16,7 @@ Remember to initialize the SDK by following step 1 [here](https://docs.jambox.ga
 ## GetEventList
 
 ```cpp
-GetEventList(Action<IApiTourneyList> OnReceived, Action<String> OnErrorReceived)
+GetEventList(Action<IApiTourneyList> OnReceived, Action<String> OnError)
 ```
 
 This method returns the list of available events for the players
@@ -24,40 +24,44 @@ This method returns the list of available events for the players
 **Parameters**
 
 - OnReceived: Call back for List of event 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
        
 ## JoinTourney
 
 ```cpp
-JoinTourney( String tourneyId, Action<IAPIJoinTourney> OnReceived, Action<String> OnErrorReceived)
+JoinTourney( String tourneyId, Action<IAPIJoinTourney> OnReceived, Action<String> OnError)
 ```
 JoinTourny allows you to enter your player into a tournament identified by tourneyId
 
-**Callbacks **
+**Parameters**
+
+- tourneyId: The Unique Id of tournament held responsible for getting detail of any tournament
+
+**Callbacks**
 
 - OnReceived:
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
 
 ## PlayTourney
 
 ```cpp
-PlayTourney( string tourneyId, string attemptType, Action<IApiPlayTourney> OnReceived, Action<String> OnErrorReceived)
+PlayTourney( string tourneyId, string attemptType, Action<IApiPlayTourney> OnReceived, Action<String> OnError)
 ```
 
 This tells ArenaSDK that the player has started an attempt for the event indemnified by `tourneyId` . Calling PlayTourney when the attempt starts allows you to make sure that the player can’t cheat by closing the game and starting a fresh attempt. 
 
-**Parameters **
+**Parameters**
 - tourneyId: The Unique Id of tournament held responsible for getting detail of any tournament
 - attemptType: The Type of attempt 
 
-**Callbacks **
+**Callbacks**
 - OnReceived
-- OnErrorReceived
+- OnError
 
 ## SubmitTournamentScore
 
 ```cpp
-SubmitTournamentScore( string LeaderboardID, long score, string displayScore, Action<IApiSubmitScore> OnReceived, Action<String> OnErrorReceived, ReplayData replayData = null)
+SubmitTournamentScore( string LeaderboardID, long score, string displayScore, Action<IApiSubmitScore> OnReceived, Action<String> OnError, ReplayData replayData = null)
 ```
 This method is used to submit the score for a given leaderboardID. 
 
@@ -69,24 +73,27 @@ This method is used to submit the score for a given leaderboardID.
  
 **Callbacks**
 - OnReceived
-- OnErrorReceived
+- OnError
   
 ## JoinDuel
 ```cpp
-JoinDuel( String tourneyId, Action<IAPIJoinDuel> OnReceived, GameObject caller, Action<String> OnErrorReceived)
+JoinDuel( String tourneyId, Action<IAPIJoinDuel> OnReceived, Action<String> OnError)
 ```
 
 Use this method to enter your player into the duel identified by `tourneyId` 
 
+**Parameters**
+- tourneyId: The Unique Id of tournament held responsible for getting detail of any tournament
+
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
   
 ## SubmitDuelScore
 
 ```cpp
-SubmitDuelScore( string matchID, long score, string displayScore, Action<IApiSubmitDuelScore> OnReceived, Action<String> OnErrorReceived, ReplayData replayData = null)
+SubmitDuelScore( string matchID, long score, string displayScore, Action<IApiSubmitDuelScore> OnReceived, Action<String> OnError, ReplayData replayData = null)
 ```
 
 Use this method to submit the Duel score for a given `matchID`
@@ -94,12 +101,12 @@ Use this method to submit the Duel score for a given `matchID`
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
   
 ## GetLeaderBoard
 
 ```cpp
-GetLeaderBoard(String LeaderboardID, Action<IApiLeaderRecordList> OnReceived, Action<String> OnErrorReceived)
+GetLeaderBoard(String LeaderboardID, Action<IApiLeaderRecordList> OnReceived, Action<String> OnError)
 ```
 
 Fetch the leaderboard for the given `LeaderboardID`
@@ -107,11 +114,11 @@ Fetch the leaderboard for the given `LeaderboardID`
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
   
 ## GetCompletedTourneyData
 ```cpp
-GetCompletedTourneyData( string Category, Action<IAPICompTourneyList> OnReceived, Action<String> OnErrorReceived)
+GetCompletedTourneyData( string Category, Action<IAPICompTourneyList> OnReceived, Action<String> OnError)
 ```
 
 Fetch the list of all completed events for your current user for a given Category. 
@@ -121,11 +128,11 @@ Fetch the list of all completed events for your current user for a given Categor
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
    
 ## ClaimReward
 ```cpp
-ClaimReward( String LeaderboardID, Action<IAPIClaimData> OnReceived, Action<String> OnErrorReceived)
+ClaimReward( String LeaderboardID, Action<IAPIClaimData> OnReceived, Action<String> OnError)
 ```
 
 Claim the Reward for the current player for the given LeaderboardID.
@@ -133,11 +140,11 @@ Claim the Reward for the current player for the given LeaderboardID.
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
   
 ## UnclaimedRewards
 ```cpp
-UnclaimedRewards( Action<IAPIUnclaimedRewards> OnReceived, Action<String> OnErrorReceived)
+UnclaimedRewards( Action<IAPIUnclaimedRewards> OnReceived, Action<String> OnError)
 ```
 
 Get a list of all unclaimed rewards for your player.
@@ -145,11 +152,11 @@ Get a list of all unclaimed rewards for your player.
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
 
 ## CreateFriendly
 ```cpp
-CreateFriendly(String tourneyName, int attempts, int duration, Action<IAPICreateFriendly> OnReceived, Action<String> OnErrorReceived)
+CreateFriendly(String tourneyName, int attempts, int duration, Action<IAPICreateFriendly> OnReceived, Action<String> OnError)
 ```
 
 Create a friendly event with the given parameters 
@@ -160,10 +167,10 @@ Create a friendly event with the given parameters
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
 ## JoinFriendly
 ```cpp
-JoinFriendly( String code, Action<IAPIJoinFriendly> OnReceived, Action<String> OnErrorReceived)
+JoinFriendly( String code, Action<IAPIJoinFriendly> OnReceived, Action<String> OnError)
 ```
 
 This allows your player to join a friendly event identified by the code. 
@@ -175,46 +182,49 @@ This allows your player to join a friendly event identified by the code.
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
 ## GetFriendlyDetails
 ```cpp
-GetFriendlyDetails( Action<IAPIFriendlyTourneyList> OnReceived, Action<String> OnErrorReceived)
+GetFriendlyDetails( Action<IAPIFriendlyTourneyList> OnReceived, Action<String> OnError)
 ```
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
 ## PlayFriendlyTourney
 ```cpp
-PlayFriendlyTourney( string tourneyId, Action<IApiPlayFriendlyTourney> OnReceived, Action<String> OnErrorReceived)
+PlayFriendlyTourney( string tourneyId, Action<IApiPlayFriendlyTourney> OnReceived, Action<String> OnError)
 ```
+
+**Parameters**
+- tourneyId: The Unique Id of tournament held responsible for getting detail of any tournament
 
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
 ## GetCurrencyData
 ```cpp
-GetCurrencyData( Action<IAPICurrencyList> OnReceived, Action<String> OnErrorReceived)
+GetCurrencyData( Action<IAPICurrencyList> OnReceived, Action<String> OnError)
 ```
 
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
 
 ## UpdateUserDetails
 ```cpp
-UpdateUserDetails(String name, string avatar)
+public async Task UpdateUserDetails(String name, string avatar, Action<IAPIUpdateUserData> OnReceived, Action<string> OnError)
 ```
 
 Update the user details for the given user. The information will be passed back to you in the leaderboard. 
 
 **Parameters**
 - name: Name of the player
-- avatar: The avatar data for the player, you can pass your avatar identifiers here.
+- avatar: The avatar data for the player, you can pass your avatar identifiers (URL, ID etc) here.
   
 **Callbacks**
 
 - onRecieved: 
-- OnErrorReceived: Details of the error that occurred.
+- OnError: Details of the error that occurred.
