@@ -63,15 +63,16 @@ When the user wants to exit from the Arena Multiplayer UI, Arena SDK will notify
 ```
 ## Game Score Submission
 
-Once a game is complete you should submit your score. SubmitScore API will submit the score to the server. Arena SDK UI will get initialized once you submit the score.
+Once a game is complete you should submit your score. SubmitScore API will submit the score to the server. Arena SDK UI will get initialized once you submit the score. You can use submit score to set any display format for your score. If set, this score will be visible to all users in the leaderbaord.
+
+e.g. if the score is time (134) taken in seconds to finish the game, then display string can be a format like "00:02:14"
 
 ```cpp
-    public void SubmitScore(int Score, int subScore)
+    public void SubmitScore(int score, int subScore, string displayScore = "")
     {
             
     }
 ```
-
 
 ## Currency Updation
 
