@@ -74,7 +74,7 @@ e.g. if the score is time (134) taken in seconds to finish the game, then displa
     }
 ```
 
-## Currency Updation
+## Currency Update
 
 The Arena SDK does not store the user currency and works on the currency details provided by the Game. SDK will notify the game for every transaction made on the server. The game should increase/decrease that currency from the user’s account here
 
