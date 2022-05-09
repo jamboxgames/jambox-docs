@@ -26,7 +26,7 @@ You can always show the players what rewards they will get when they graduate fr
 
 - Create a long term Duel on the Jambox Arena Dashboard 
 - Fetch the List of events using the `GetEventList` method, you should have only a single duel. 
-- Play a Join Duel or a VS button on your home screen, when the player presses the button, call `JoinDuel`, and then call `SubmitDuelScore` once the attempt is complete. `IAPIDuelResult` will have the result of the duel which you can then show to your players with your UI
+- Place a Join Duel or a VS button on your home screen, when the player presses the button, call `JoinDuel`, and then call `SubmitDuelScore` once the attempt is complete. `IAPIDuelResult` will have the result of the duel which you can then show to your players with your UI
 
 ## Auto Join a Weekly Tournament
 
