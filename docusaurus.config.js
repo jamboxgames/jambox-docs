@@ -31,12 +31,6 @@ module.exports = {
           docId: "sdkdocs/introduction",
           position: "left",
           label: "Jambox Arena Docs",
-        },
-        {
-          type: "doc",
-          docId: "publishing/introduction",
-          position: "left",
-          label: "Publishing SDK",
         }
       ],
     },

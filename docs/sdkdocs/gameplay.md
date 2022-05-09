@@ -37,7 +37,9 @@ In the example below, you can place your gameplay start code or scene switching 
     }
 ```
 
-Developer can add key/value pairs in tournament metadata while creating on dashboard. These key/values are received in the Match object in the `OnPlay` callback. Game can use these keys to control the gameplay initialisation.
+Developer can add key/value pairs in tournament metadata while creating on dashboard. These key/values are received in the Match object in the `OnPlay` callback. Game can use these keys to control the gameplay initialisation. 
+
+[Read More about Metadata](../dashboard/creating-events#metadata)
 
 ```cpp
     private void OnPlayHit(Match matchData)
