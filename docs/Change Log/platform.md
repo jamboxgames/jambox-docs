@@ -7,6 +7,6 @@
   - Best Score: The best score of the player
   - Incremental: the total score of the player
   - Latest: The last score of the player
-- Added a new Test Campaign Feature. 
+- Added a new [Test Events Feature.](../dashboard/testing-events.md)
 - All events now have an [Entry Type](../dashboard/creating-events#entry-type), using which you can define how players can enter the event. 
 
