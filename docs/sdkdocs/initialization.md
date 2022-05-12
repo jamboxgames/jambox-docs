@@ -15,12 +15,14 @@ You should provide a unique `userID` if available. If there is no userID provide
 
 Games can also provide a username/display name. The SDK will use the same name for the user within its screens. If no username is provided, SDK will ask for a username when initialized for the first time.
 
+Games can also set a user as test user. While creating events, developer can enable them initialy to testers only before publishing to all users.
+
 ```cpp
     using Jambox.Tourney.Connector;
 
     void Initialize()
     {
-        ArenaSDKEvent.Instance.InitializeArenaSdk();
+        ArenaSDKEvent.Instance.InitializeArenaSdk("GameUserName","game-user-id",true);        
     }
 ```
 
