@@ -22,7 +22,8 @@ Games can also set a user as test user. While creating events, developer can ena
 
     void Initialize()
     {
-        ArenaSDKEvent.Instance.InitializeArenaSdk("GameUserName","game-user-id",true);        
+        bool IsTestUser = true;
+        ArenaSDKEvent.Instance.InitializeArenaSdk("GameUserName","game-user-id",IsTestUser);        
     }
 ```
 
