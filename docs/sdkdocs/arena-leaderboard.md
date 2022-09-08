@@ -73,7 +73,19 @@ Creating Leaderboards is a simple process that takes only a few steps. Here are 
         public async Task GetLeaderboardRecord(string LBId, string partitionKey, Action<IApiLeaderRecordList> OnReceived)
 ```
 
+### Fetch Members Around Owner
 
+```cpp
+        /// <summary>
+        /// This method will be called from UI to get all Leaderboard User Records.
+        /// </summary>
+        /// <param name="LBId">Leaderboard ID.</param>
+        /// <param name="partitionKey">Partition Key for leaderboard. If no partition then pass empty string("") </param>
+        /// <param name="OnReceived">The Action on completion of this particular task.</param>
+        /// <returns></returns>
+        /// 
+        public async Task GetLeaderboardAroundMe(string LBId, string partitionKey, Action<IApiLeaderAroundMe> OnReceived)
+```
 
 ###  Get Last Played Leaderboard
 
